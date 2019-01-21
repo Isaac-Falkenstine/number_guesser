@@ -21,7 +21,7 @@
         </div>
         <div class="row input">
           <div class="light" id="lastNote" >&nbsp;</div>
-          <input type="number" onchange="handleChange(this);" id="guessInput" class="light" placeholder="Enter your guess">
+          <input type="number" onchange="rangeCheck(this);" id="guessInput" class="light" placeholder="Enter your guess">
         </div>
         <div class="row commit">
           <button type="button" class="btn btn-dark" id="guessBtn" onclick="guessMethod()" >Guess</button>

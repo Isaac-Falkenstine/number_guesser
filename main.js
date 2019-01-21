@@ -45,7 +45,7 @@ function getRand() {
   return parseInt(Math.random() * ( maxNum - minNum ) + minNum );
 }
 
-function handleChange(input) {
+function rangeCheck(input) {
   let checkVal = parseInt(input.value)
   if ( checkVal < minNum ) { lastNote.innerHTML = 'INPUT TOO LOW'; }
   else if (checkVal > maxNum ) { lastNote.innerHTML = 'INPUT TOO HIGH'; }
