@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="main.js"></script>
+    <nav class="navbar navbar-inverse navbar-static-top">
+  		<div class="navbar-center">
+        <h1> <ul id="title-1" class="nav navbar-nav navbar-center">Number </ul> <ul id="title-2" class="nav navbar-nav navbar-center">Guesser</ul></h1>
+  		</div>
+    </nav>
+	   <div class="container-fluid">
+        <div class="row range">
+          <input type='number' value=1 id="minRange" class="light" />
+          <input type='number' value=100 id="maxRange" class="light" /><button id="submit" onclick="rangeMethod()">Set Range</button>
+        </div>
+        <div class="row input">
+          <div class="light" id="lastNote" >&nbsp;</div>
+          <input type="number" onchange="handleChange(this);" id="guessInput" class="light" placeholder="Enter your guess">
+        </div>
+        <div class="row commit">
+          <button type="button" class="btn btn-dark" id="guessBtn" onclick="guessMethod()" >Guess</button>
+          <button type="button" class="btn btn-dark" id="clearBtn" disabled="disabled" onclick="aClear()" >Clear</button>
+        </div>
+        <div class="row feedback">
+          <h4>Your last guess was:</h4>
+          <h1 class="bigteal" id="lastGuess"></h1>
+          <h4 id="result"></h4>
+        </div>
+        <div class="row reset">
+        <button type="button" class="btn btn-dark" id="resetBtn" disabled="disabled" onclick="aReset()">Reset</button>
+        <h4 class="light" id="currentRange"></h4>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
